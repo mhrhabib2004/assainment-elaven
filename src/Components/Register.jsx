@@ -32,8 +32,9 @@ const Register = () => {
 
         }
 
-        else if (!/^(?=.*[a-z])(?=.*[A-Z])/.test(password)) {
-            setRegistrationError('You need to add one uppercase and one lowarcase word ');
+        else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])/
+        .test(password)) {
+            setRegistrationError('you need to use a capittal and special charecter ');
             return;
         }
 

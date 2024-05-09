@@ -49,12 +49,14 @@ const Login = () => {
                     icon: "warning",
                     dangerMode: true,
                   })
+                  navigate(location?.state ? location.state : "/Login");
                   
             })
     }
-    if(loading){
-       return <span className="loading loading-spinner text-primary"></span>;
-    }
+    // if(loading){
+    //    return <span className="loading loading-spinner text-primary"></span>;
+      
+    // }
 
   const handelGooglelogin= ()=>{
     signInWithPopup(auth,provider)

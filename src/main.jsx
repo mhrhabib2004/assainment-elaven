@@ -12,6 +12,7 @@ import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvaider from './Provaider/AuthProvaider.jsx';
 import Errorpage from './Components/Errorpage.jsx';
+import Addbook from './Components/Addbook.jsx';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path:"/Register",
         element:<Register></Register>
+      },
+      {
+        path:"/addbook",
+        element:<Addbook></Addbook>
       }
    
     ]
