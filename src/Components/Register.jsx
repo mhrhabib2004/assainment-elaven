@@ -34,7 +34,7 @@ const Register = () => {
 
         else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])/
         .test(password)) {
-            setRegistrationError('you need to use a capittal and special charecter ');
+            setRegistrationError('you need to use a capittal and special ');
             return;
         }
 
@@ -54,12 +54,8 @@ const Register = () => {
                             icon: "success",
                             dangerMode: true,
                         })
-
                         return;
-
                     })
-
-
             })
             .catch(error => {
                 swal({

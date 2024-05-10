@@ -11,7 +11,7 @@ import auth from "../firebase.config";
 
 
 const Login = () => {
-    const { signIn,provider,gitProvider,loading } = useContext(AuthContext);
+    const { signIn,provider,gitProvider } = useContext(AuthContext);
     const [showPassword,setshowpassword]=useState(false);
 
     const location= useLocation();
@@ -50,6 +50,7 @@ const Login = () => {
                     dangerMode: true,
                   })
                   navigate(location?.state ? location.state : "/Login");
+                  console.log(error)
                   
             })
     }
@@ -71,7 +72,7 @@ const Login = () => {
 
         navigate(location?.state ? location.state : "/");
     })
-    .catch(error=>{
+    .catch(()=>{
         swal({
             title: "opps",
             text: "Your Email or password worng ",
@@ -83,7 +84,7 @@ const Login = () => {
 
     const handelGitHubLogin =()=>{
         signInWithPopup(auth,gitProvider)
-        .then(result=>{
+        .then(()=>{
             swal({
                 title: "Welcome",
                 text: "You Loged in SuCCessfullY",
@@ -94,7 +95,7 @@ const Login = () => {
             navigate(location?.state ? location.state : "/");
 
         })
-        .catch(error =>{
+        .catch(() =>{
             swal({
                 title: "opps",
                 text: "Your Email or password worng ",
@@ -141,7 +142,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
-                            <p>Don't have an account? <Link to={"/Register"} className="btn btn-link">Register</Link></p>
+                            <p>Do not have an account? <Link to={"/Register"} className="btn btn-link">Register</Link></p>
                             < hr />
                             <div className="text-center">OR</div>
                             <hr />
