@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,6 +14,7 @@ import AuthProvaider from './Provaider/AuthProvaider.jsx';
 import Errorpage from './Components/Errorpage.jsx';
 import Addbook from './Components/Addbook.jsx';
 import Viewleastdata from './Components/Viewleastdata.jsx';
+import Allbooks from './Components/Allbooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         element: <Viewleastdata></Viewleastdata>,
         loader: ()=>fetch("http://localhost:5000/addbook")
       },
+      {
+        path:"/allbooks",
+        element:<Allbooks></Allbooks>,
+        loader:()=>fetch("http://localhost:5000/addbook")
+      }
    
     ]
   },

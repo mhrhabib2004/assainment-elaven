@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 
+
+
 const Leastbookscard = ({ books }) => {
     const { image, name, author, category, rating } = books;
     return (
@@ -17,6 +19,8 @@ const Leastbookscard = ({ books }) => {
             </div>
         </div>
     );
+    
 };
+
 
 export default Leastbookscard;
