@@ -13,6 +13,7 @@ import Register from './Components/Register.jsx';
 import AuthProvaider from './Provaider/AuthProvaider.jsx';
 import Errorpage from './Components/Errorpage.jsx';
 import Addbook from './Components/Addbook.jsx';
+import Viewleastdata from './Components/Viewleastdata.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,12 @@ const router = createBrowserRouter([
       {
         path:"/addbook",
         element:<Addbook></Addbook>
-      }
+      },
+       {
+        path:"/viewdata/:id",
+        element: <Viewleastdata></Viewleastdata>,
+        loader: ()=>fetch("http://localhost:5000/addbook")
+      },
    
     ]
   },

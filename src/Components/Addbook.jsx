@@ -1,10 +1,46 @@
+import swal from "sweetalert";
 
 const Addbook = () => {
+    const handeleaddbook = e =>{
+        e.preventDefault();
+        const form=e.target;
+        const photo=form.photo.value;
+        const bookname=form.bookname.value;
+        const Quantity=form.Quantity.value;
+        const author=form.author.value;
+        const category=form.category.value;
+        const rating=form.rating.value;
+        const description=form.description.value;
+
+        const booksData={photo,bookname,Quantity,author,category,rating,description};
+        console.log(booksData)
+
+        fetch('http://localhost:5000/addbook',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(booksData),
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if (data.insertedId){
+                swal({
+                    title: "WoW",
+                    text: "You added spot successfully",
+                    icon: "success",
+                    confirmaButtonText:'cool'
+                  })
+            }
+        })
+     }
+
     return (
         <div>
             <h1 className="text-center text-3xl font-extrabold"> <span className="text-red-600">Add </span><span className="text-green-900">Book</span></h1>
             {/* from here */}
-            <form className="card-body">
+            <form onSubmit={handeleaddbook} className="card-body">
                 <div className="grid gap-4 mt-7 w-4/5 mx-auto md:grid-cols-2">
                     <div>
                         <div className="label">
@@ -40,7 +76,7 @@ const Addbook = () => {
                         <div className="label">
                             <span className="label-text">Rating</span>
                         </div>
-                        <input type="number" required name="average" placeholder="Type here" className="input input-bordered w-full" min="1" max="5" />
+                        <input type="number" required name="rating" placeholder="Type here" className="input input-bordered w-full" min="1" max="5" />
                     </div>
 
 
@@ -49,7 +85,7 @@ const Addbook = () => {
                     <div className="label">
                         <span className="label-text">short description</span>
                     </div>
-                    <textarea placeholder="description" className="textarea textarea-bordered textarea-sm w-full " ></textarea>
+                    <textarea name="description" placeholder="description" className="textarea textarea-bordered textarea-sm w-full " ></textarea>
                     <div>
 
                         <input className="btn mt-4 btn-success  w-full" type="submit" value="Add" />

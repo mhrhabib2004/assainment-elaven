@@ -42,7 +42,7 @@ const Navbar = () => {
         <div data-aos="fade-down"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000">
-            <div className="navbar bg-purple-400  rounded-md animate__animated animate__swing" >
+            <div className="navbar bg-red-300  rounded-md animate__animated animate__swing" >
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,7 +52,8 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost font-bold md:text-3xl uppercase ">Trip Trekker</a>
+                    {/* <a className="btn btn-ghost font-bold md:text-3xl "></a> */}
+                    <a className="w-28" href="/"><img src="https://i.ibb.co/vzGxVwm/Beige-and-Black-Vintage-Illustrative-Bookstore-Circle-Logo.png" alt="" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu text-sm font-bold menu-horizontal px-1">
