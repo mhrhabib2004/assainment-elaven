@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Allbookstable = ({book}) => {
@@ -26,7 +27,7 @@ const Allbookstable = ({book}) => {
               <td>Category : {category}</td>
               <td>Rating : {rating}</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+              <Link to={`/Updatebook/${book._id}`}><button className="btn btn-outline btn-accent">Update</button></Link>
               </th>
             </tr>
             

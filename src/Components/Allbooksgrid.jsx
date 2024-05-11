@@ -13,7 +13,7 @@ const Allbooksgrid = ({book}) => {
                 <p>Category : {category}</p>
                 <p>Rating : {rating}</p>
                 
-                    <Link className="" to={`/viewdata/${books._id}`}><button className="btn w-full text-xl btn-outline btn-secondary">Details</button></Link>
+                <Link to={`/Updatebook/${book._id}`}><button className="btn btn-outline btn-accent">Update</button></Link>
                 
             </div>
         </div>

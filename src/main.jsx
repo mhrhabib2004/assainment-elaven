@@ -17,6 +17,7 @@ import Viewleastdata from './Components/Viewleastdata.jsx';
 import Allbooks from './Components/Allbooks.jsx';
 import Allbooksgrid from './Components/Allbooksgrid.jsx';
 import Allbookstable from './Components/Allbookstable.jsx';
+import UpdateBooks from './Components/UpdateBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
       {
         path:"allbookstable",
         element:<Allbookstable></Allbookstable>
+      },
+      {
+        path:"/Updatebook/:id",
+        element:<UpdateBooks></UpdateBooks>,
+        loader:({params})=> fetch(`http://localhost:5000/addbook/${params.id}`)
       }
    
     ]
