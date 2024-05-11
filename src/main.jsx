@@ -15,6 +15,8 @@ import Errorpage from './Components/Errorpage.jsx';
 import Addbook from './Components/Addbook.jsx';
 import Viewleastdata from './Components/Viewleastdata.jsx';
 import Allbooks from './Components/Allbooks.jsx';
+import Allbooksgrid from './Components/Allbooksgrid.jsx';
+import Allbookstable from './Components/Allbookstable.jsx';
 
 
 const router = createBrowserRouter([
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
         path:"/allbooks",
         element:<Allbooks></Allbooks>,
         loader:()=>fetch("http://localhost:5000/addbook")
+      },
+      {
+        path:"/allbooksgrid",
+        element:<Allbooksgrid></Allbooksgrid>
+      },
+      {
+        path:"allbookstable",
+        element:<Allbookstable></Allbookstable>
       }
    
     ]
