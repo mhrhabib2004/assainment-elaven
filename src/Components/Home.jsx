@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "./Slider";
 import CardCategoris from "../least4books/CardCategoris";
 import Bloog from "./Bloog";
+import Contact from "./Contact";
 // import Least4books from "./Least4books";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             {/* <Least4books books={books}></Least4books> */}
             <CardCategoris books={books} ></CardCategoris>
             <Bloog></Bloog>
+            <Contact></Contact>
 
         </div>
     );

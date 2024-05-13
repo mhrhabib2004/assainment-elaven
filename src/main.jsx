@@ -23,6 +23,7 @@ import PrivetRout from './Components/PriveteRout.jsx';
 import Least4books from './Components/Least4books.jsx';
 import Booksdata from './least4books/Booksdata.jsx';
 import Leastbookscard from './Components/Leastbookscard.jsx';
+import CategoryBook from './Components/CategoryBook.jsx';
 // import Bookscategory from './Components/Bookscategory.jsx';
 // import Least4books from './Components/Least4books.jsx';
 // import Bookscategory from './Components/Bookscategory.jsx';
@@ -53,12 +54,12 @@ const router = createBrowserRouter([
       },
        {
         path:"/viewdata/:id",
-        element: <Viewleastdata></Viewleastdata>,
+        element: <PrivetRout><Viewleastdata></Viewleastdata></PrivetRout>,
         loader: ()=>fetch("http://localhost:5000/addbook")
       },
       {
         path:"/allbooks",
-        element:<Allbooks></Allbooks>,
+        element:<PrivetRout><Allbooks></Allbooks></PrivetRout>,
         loader:()=>fetch("http://localhost:5000/addbook")
       },
       {
@@ -67,11 +68,16 @@ const router = createBrowserRouter([
       },
       {
         path:"allbookstable",
-        element:<Allbookstable></Allbookstable>
+        element:<PrivetRout><Allbookstable></Allbookstable></PrivetRout>
+      },
+      {
+        path:"category-book/:category",
+        element:<PrivetRout><CategoryBook/></PrivetRout>,
+        loader:({params})=> fetch(`http://localhost:5000/addbook?category=${params.category}`)
       },
       {
         path:"/Updatebook/:id",
-        element:<UpdateBooks></UpdateBooks>,
+        element:<PrivetRout><UpdateBooks></UpdateBooks></PrivetRout>,
         loader:({params})=> fetch(`http://localhost:5000/addbook/${params.id}`)
       },
       {
