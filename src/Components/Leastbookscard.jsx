@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-
-
-const Leastbookscard = ({ books }) => {
-    const { image, name, author, category, rating } = books;
+const Leastbookscard = ({ book }) => {
+    const { image, name, author, category, rating } = book;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl">
             <figure><img className="h-48 ml-10 mb-8 mt-7" src={image} alt="Album" /></figure>
@@ -14,13 +12,11 @@ const Leastbookscard = ({ books }) => {
                 <p>Category : {category}</p>
                 <p>Rating : {rating}</p>
                 
-                    <Link className="" to={`/viewdata/${books._id}`}><button className="btn w-full text-xl btn-outline btn-secondary">Details</button></Link>
+                    <Link className="" to={`/viewdata/${book._id}`}><button className="btn w-full text-xl btn-outline btn-secondary">Details</button></Link>
                 
             </div>
         </div>
     );
-    
 };
-
 
 export default Leastbookscard;

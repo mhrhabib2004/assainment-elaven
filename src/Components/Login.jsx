@@ -108,12 +108,12 @@ const Login = () => {
         <div>
      
             
-            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2020/09/27/ratargul_swamp_forest_in_syalhet._photo_collected.jpg)' }}>
+            <div className="hero min-h-screen bg-no-repeat bg-cover bg-center  mt-7 rounded-xl" style={{ backgroundImage: 'url(https://content.api.news/v3/images/bin/8791f511b22d3b0abb8b52c575bff083?width=2048)' }}>
                 
                 <div className="hero-content flex-col ">
                     
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <h1 className="text-4xl text-center text-red-800 mt-1 font-bold">Login now!</h1>
+                    <h1 className="text-4xl text-center text-red-800 mt-1 font-bold">Login</h1>
                     <br />
                     <hr />
                     

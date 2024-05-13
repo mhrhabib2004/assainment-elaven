@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const Viewleastdata = () => {
     const books = useLoaderData();
@@ -20,8 +20,8 @@ const Viewleastdata = () => {
                 <p>Bescription : {description}</p>
                 <p className="w-1/2">Contents : {contents}</p>
                 
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
+                <div className="w-full">
+                    <Link to={"/borrowpage"}><button className="btn btn-outline btn-accent">Borrow</button></Link>
                 </div>
             </div>
         </div>

@@ -8,14 +8,20 @@ const Least4books = () => {
             .then(res => res.json())
             .then(data => setbooks(data))
     }, [])
+
+    // console.log(books,'vvvvv')
+    // const categories = ['Novel', 'Thriller', 'History', 'Drama', 'Sci-Fi'];
+   
+
+   
     return (
         <div className="mt-7">
             <h1 className="text-4xl font-bold text-center">BOOKS</h1>
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+            {/* <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                 {
-                    books.slice(0,4).map(books=><Leastbookscard key={books._id} books={books}></Leastbookscard>)
+                    books.map(book=><Leastbookscard key={book._id} book={book}></Leastbookscard>)
                 }
-            </div>
+            </div> */}
 
         </div>
     );

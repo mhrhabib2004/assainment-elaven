@@ -18,6 +18,14 @@ import Allbooks from './Components/Allbooks.jsx';
 import Allbooksgrid from './Components/Allbooksgrid.jsx';
 import Allbookstable from './Components/Allbookstable.jsx';
 import UpdateBooks from './Components/UpdateBooks.jsx';
+import Borrowpage from './Components/Borrowpage.jsx';
+import PrivetRout from './Components/PriveteRout.jsx';
+import Least4books from './Components/Least4books.jsx';
+import Booksdata from './least4books/Booksdata.jsx';
+import Leastbookscard from './Components/Leastbookscard.jsx';
+// import Bookscategory from './Components/Bookscategory.jsx';
+// import Least4books from './Components/Least4books.jsx';
+// import Bookscategory from './Components/Bookscategory.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,7 +36,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:5000/addbook')
       },
       {
         path:"/Login",
@@ -40,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/addbook",
-        element:<Addbook></Addbook>
+        element:<PrivetRout><Addbook></Addbook></PrivetRout>
       },
        {
         path:"/viewdata/:id",
@@ -64,8 +73,24 @@ const router = createBrowserRouter([
         path:"/Updatebook/:id",
         element:<UpdateBooks></UpdateBooks>,
         loader:({params})=> fetch(`http://localhost:5000/addbook/${params.id}`)
-      }
-   
+      },
+      {
+        path:"/borrowpage",
+        element:<Borrowpage></Borrowpage>
+      },
+      {
+        path:"/leastbook",
+        element:<Least4books></Least4books>
+      },
+      // {
+      //   path:"/Booksdata",
+      //   element:<Booksdata></Booksdata>
+      // }
+      // {
+      //   path:"/bookcard",
+      //   element:<Leastbookscard></Leastbookscard>
+      // }
+     
     ]
   },
 ]);

@@ -4,15 +4,15 @@ const Addbook = () => {
     const handeleaddbook = e =>{
         e.preventDefault();
         const form=e.target;
-        const photo=form.photo.value;
-        const bookname=form.bookname.value;
+        const image =form.image.value;
+        const name=form.name.value;
         const Quantity=form.Quantity.value;
         const author=form.author.value;
         const category=form.category.value;
         const rating=form.rating.value;
         const description=form.description.value;
 
-        const booksData={photo,bookname,Quantity,author,category,rating,description};
+        const booksData={image,name,Quantity,author,category,rating,description};
         console.log(booksData)
 
         fetch('http://localhost:5000/addbook',{
@@ -46,13 +46,13 @@ const Addbook = () => {
                         <div className="label">
                             <span className="label-text"> image URL</span>
                         </div>
-                        <input type="text" required name="photo" placeholder="Type here" className="input input-bordered w-full" />
+                        <input type="text" required name="image" placeholder="Type here" className="input input-bordered w-full" />
                     </div>
                     <div>
                         <div className="label">
                             <span className="label-text">Book Name</span>
                         </div>
-                        <input type="text" required name="bookname" placeholder="Book Name" className="input input-bordered w-full" />
+                        <input type="text" required name="name" placeholder="Book Name" className="input input-bordered w-full" />
                     </div>
                     <div>
                         <div className="label">
@@ -68,7 +68,7 @@ const Addbook = () => {
                     </div>
                     <div>
                         <div className="label ">
-                            <span className="label-text w-full">Category</span>
+                            <span className="label-text w-full">category</span>
                         </div>
                         <input type="text" required name="category" placeholder="Type here" className="input input-bordered w-full" />
                     </div>

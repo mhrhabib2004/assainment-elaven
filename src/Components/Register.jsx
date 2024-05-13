@@ -73,7 +73,7 @@ const Register = () => {
 
         <div>
 
-            <div className="hero min-h-screen bg-base-200 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://blog.flyticket.com.bd/wp-content/uploads/2020/05/image007.jpg)' }}>
+            <div className="hero min-h-screen bg-base-200 mt-7 bg-no-repeat bg-cover bg-center  rounded-xl" style={{ backgroundImage: 'url(https://assets.architecturaldigest.in/photos/624c2654cf7483eb90e638d6/4:3/w_1440,h_1080,c_limit/Books-1.jpg)' }}>
 
                 <div className="hero-content flex-col ">
                     <div className="text-center">
@@ -81,7 +81,7 @@ const Register = () => {
                     </div>
 
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <h1 className="text-4xl font-bold text-center text-red-700 mt-1">Register now!</h1>
+                        <h1 className="text-4xl font-bold text-center text-red-700 mt-1">Register</h1>
                         <br />
                         <hr />
                         <form onSubmit={handelRegister} className="card-body">

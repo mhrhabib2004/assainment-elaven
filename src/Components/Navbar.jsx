@@ -30,6 +30,7 @@ const Navbar = () => {
         <li><NavLink to={"/allbooks"}>All Books</NavLink></li>
         <li><NavLink to={"/addbook"}>Add Book</NavLink></li>
         <li><NavLink to={"/borrowedbooks"}>Borrowed Books</NavLink></li>
+        <li><NavLink to={"/Booksdata"}>Books</NavLink></li>
         <label className="cursor-pointer grid place-items-center">
             <input checked={isdark}
                 onChange={() => setIsdark(!isdark)} type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
