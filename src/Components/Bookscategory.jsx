@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-// import Leastbookscard from "./Leastbookscard";
+
 
 const Bookscategory = () => {
-    // const categories = ['Novel', 'Thriller', 'History', 'Drama', 'Sci-Fi'];
+    
 
   
 

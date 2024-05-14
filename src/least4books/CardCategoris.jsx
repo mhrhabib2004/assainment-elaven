@@ -14,12 +14,7 @@ const CardCategoris = ({ books }) => {
         <div className="mt-7">
             <h1 className="text-4xl font-bold text-center uppercase">BOOKS categories</h1>
 
-            {/* {
-                        books.filter(j => j.category === 'Novel').map(book => <Booksdata key={book._id} book={book} ></Booksdata>)
-                    } */}
-            {/* {
-                        books.filter(j => j.category === 'Thriller').map(book => <Booksdata key={book._id} book={book} ></Booksdata>)
-                    } */}
+           
             <div className="grid md:grid-cols-3 gap-5 mt-7 grid-cols-1">
                 {allPossibleCategories.map((c,idx) => {
                     return(

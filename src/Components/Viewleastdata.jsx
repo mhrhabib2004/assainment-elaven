@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Borrowpage from "./Borrowpage";
 
 const Viewleastdata = () => {
@@ -29,7 +29,7 @@ const Viewleastdata = () => {
                         <div className="modal-box w-1/2 max-w-5xl">
                             <h3 className="font-bold text-lg text-center">Hello!</h3>
                             <div className="mt-5 ">
-                                <Borrowpage></Borrowpage>
+                                <Borrowpage Book={Book}></Borrowpage>
 
                                 </div>
                             

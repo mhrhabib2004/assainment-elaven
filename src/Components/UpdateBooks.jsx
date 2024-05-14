@@ -18,7 +18,7 @@ const UpdateBooks = () => {
 
         
 
-        fetch(`http://localhost:5000/addbook/${bookupdate._id}`,{
+        fetch(`${import.meta.env.VITE_LINK}/addbook/${bookupdate._id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

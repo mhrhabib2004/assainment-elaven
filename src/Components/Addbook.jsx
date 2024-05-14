@@ -15,7 +15,7 @@ const Addbook = () => {
         const booksData={image,name,Quantity,author,category,rating,description};
         console.log(booksData)
 
-        fetch('http://localhost:5000/addbook',{
+        fetch(`${import.meta.env.VITE_LINK}/addbook`,{
             method:'POST',
             headers:{
                 'content-type':'application/json'

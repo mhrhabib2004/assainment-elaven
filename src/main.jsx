@@ -20,13 +20,8 @@ import Allbookstable from './Components/Allbookstable.jsx';
 import UpdateBooks from './Components/UpdateBooks.jsx';
 import Borrowpage from './Components/Borrowpage.jsx';
 import PrivetRout from './Components/PriveteRout.jsx';
-import Least4books from './Components/Least4books.jsx';
-import Booksdata from './least4books/Booksdata.jsx';
-import Leastbookscard from './Components/Leastbookscard.jsx';
 import CategoryBook from './Components/CategoryBook.jsx';
-// import Bookscategory from './Components/Bookscategory.jsx';
-// import Least4books from './Components/Least4books.jsx';
-// import Bookscategory from './Components/Bookscategory.jsx';
+import Borreowedbooks from './Components/Borreowedbooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,7 +33,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/addbook')
+        loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
       },
       {
         path:"/Login",
@@ -55,12 +50,12 @@ const router = createBrowserRouter([
        {
         path:"/viewdata/:id",
         element: <PrivetRout><Viewleastdata></Viewleastdata></PrivetRout>,
-        loader: ()=>fetch("http://localhost:5000/addbook")
+        loader: ()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
       },
       {
         path:"/allbooks",
         element:<PrivetRout><Allbooks></Allbooks></PrivetRout>,
-        loader:()=>fetch("http://localhost:5000/addbook")
+        loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
       },
       {
         path:"/allbooksgrid",
@@ -73,29 +68,24 @@ const router = createBrowserRouter([
       {
         path:"category-book/:category",
         element:<PrivetRout><CategoryBook/></PrivetRout>,
-        loader:({params})=> fetch(`http://localhost:5000/addbook?category=${params.category}`)
+        loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/addbook?category=${params.category}`)
       },
       {
         path:"/Updatebook/:id",
         element:<PrivetRout><UpdateBooks></UpdateBooks></PrivetRout>,
-        loader:({params})=> fetch(`http://localhost:5000/addbook/${params.id}`)
+        loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/${params.id}`)
       },
       {
         path:"/borrowpage",
-        element:<Borrowpage></Borrowpage>
+        element:<Borrowpage></Borrowpage>,
+        loader:()=> fetch(`${import.meta.env.VITE_LINK}/borrow`)
+        
       },
       {
-        path:"/leastbook",
-        element:<Least4books></Least4books>
-      },
-      // {
-      //   path:"/Booksdata",
-      //   element:<Booksdata></Booksdata>
-      // }
-      // {
-      //   path:"/bookcard",
-      //   element:<Leastbookscard></Leastbookscard>
-      // }
+        path:"/borrowedbooks",
+        element:<PrivetRout><Borreowedbooks></Borreowedbooks></PrivetRout>,
+        loader: ()=> fetch(`${import.meta.env.VITE_LINK}/borrow`)
+      }
      
     ]
   },
