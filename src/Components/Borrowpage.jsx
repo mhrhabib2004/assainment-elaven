@@ -70,7 +70,7 @@ const Borrowpage = ({ Book }) => {
                
                    <div>
                    
-                    <input type="text" value={moment().format("MMM Do YY") } placeholder="update"  name="borrrowedDate" className="input hidden input-bordered input-secondary " />
+                    <input type="date" value={moment().format("MMM Do YY")}   name="borrrowedDate" className="input hidden input-bordered input-secondary " />
                     </div>
                 
                 

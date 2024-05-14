@@ -63,7 +63,7 @@ const Borreowedbooks = () => {
                  <h2 className="card-title">Name : {data.Name}</h2>
                  
                  <p>Category : {data.Category}</p>
-                 <p>Borrowed Date : {data.borrowedDate}</p>
+                 <p>Borrowed Date : {data.borrrowedDate}</p>
                  <p>Return date : {data.date}</p>
                  
                  <button onClick={() => handledelete(data._id)} className="btn btn-outline btn-secondary">Retrun Book</button>

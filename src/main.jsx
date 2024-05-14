@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/allbooksgrid",
-        element:<Allbooksgrid></Allbooksgrid>
+        element:<PrivetRout><Allbooksgrid></Allbooksgrid></PrivetRout>
       },
       {
         path:"allbookstable",
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/borrowpage",
-        element:<Borrowpage></Borrowpage>,
+        element:<PrivetRout><Borrowpage></Borrowpage></PrivetRout>,
         loader:()=> fetch(`${import.meta.env.VITE_LINK}/borrow`)
         
       },

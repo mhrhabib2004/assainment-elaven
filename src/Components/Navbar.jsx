@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import swal from "sweetalert";
+import navlogo from '../assets/logonav.png';
 
 const Navbar = () => {
     const [isdark, setIsdark] = useState(
@@ -30,7 +31,7 @@ const Navbar = () => {
         <li><NavLink to={"/allbooks"}>All Books</NavLink></li>
         <li><NavLink to={"/addbook"}>Add Book</NavLink></li>
         <li><NavLink to={"/borrowedbooks"}>Borrowed Books</NavLink></li>
-        <li><NavLink to={"/Booksdata"}>Books</NavLink></li>
+        
         <label className="cursor-pointer grid place-items-center">
             <input checked={isdark}
                 onChange={() => setIsdark(!isdark)} type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
@@ -54,7 +55,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     {/* <a className="btn btn-ghost font-bold md:text-3xl "></a> */}
-                    <a className="w-28" href="/"><img src="https://i.ibb.co/vzGxVwm/Beige-and-Black-Vintage-Illustrative-Bookstore-Circle-Logo.png" alt="" /></a>
+                    <a  href="/"><img className="rounded-xl h-16 "  src="https://i.ibb.co/99qGTy1/Screenshot-16-removebg-preview-1.png" alt="" /></a>
+                   
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu text-sm font-bold menu-horizontal px-1">
@@ -65,7 +67,7 @@ const Navbar = () => {
 
                     {
                         user?.email ? <div className="flex gap-2 items-center"><div className="w-10 rounded-full lg:tooltip lg:tooltip-left" data-tip={user?.displayName} >
-                            <img className="rounded-full " alt="profile" src={user?.photoURL} />
+                            <img className="rounded-full " alt="profile" referrerPolicy="no-referrer"  src={user?.photoURL} />
                         </div> <button onClick={handelSingout} className="btn text-xl font-bold  btn-warning">Sign out</button></div> : <div className="flex gap-1"><Link to={"/Login"}> <button className="btn md:text-xl font-bold btn-outline">Login</button></Link> <Link to={"/Register"}><button className="btn md:text-xl font-bold btn-outline">Register</button></Link></div>
                     }
 

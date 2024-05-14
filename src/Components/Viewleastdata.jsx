@@ -24,7 +24,7 @@ const Viewleastdata = () => {
                 <div className="w-full ">
                     {/* <Link onClick={() => document.getElementById('my_modal_4').showModal()} ><button className="btn btn-outline btn-accent "   >Borrow</button></Link> */}
 
-                    <button className="btn" onClick={() => document.getElementById('my_modal_4').showModal()}>Borrow</button>
+                    <button className="btn btn-outline btn-success" onClick={() => document.getElementById('my_modal_4').showModal()}>Borrow</button>
                     <dialog id="my_modal_4" className="modal">
                         <div className="modal-box w-1/2 max-w-5xl">
                             <h3 className="font-bold text-lg text-center">Hello!</h3>
