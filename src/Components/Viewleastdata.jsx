@@ -40,7 +40,7 @@ const Viewleastdata = () => {
 
                     <button className="btn btn-outline btn-success" onClick={() => document.getElementById('my_modal_4').showModal()}>Borrow</button>
                     <dialog id="my_modal_4" className="modal">
-                        <div className="modal-box w-1/2 max-w-5xl">
+                        <div className="modal-box w-1/2">
                             <h3 className="font-bold text-lg text-center uppercase">give here your information</h3>
                             <div className="mt-5 ">
                                 <Borrowpage books={books}></Borrowpage>

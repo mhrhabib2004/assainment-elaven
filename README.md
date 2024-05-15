@@ -27,4 +27,4 @@ Currently, two official plugins are available:
 - [axios](https://axios-http.com/docs/intro) axios
 - [react-datepicker](https://www.npmjs.com/package/react-datepicker) react-datepicker
 - Firebase ([for database and application hosting](https://firebase.google.com/docs))
-- [sweetalert]()
+- [sweetalert2]([https://sweetalert2.github.io/])
