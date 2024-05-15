@@ -51,18 +51,18 @@ const Borrowpage = ({ books }) => {
 
     }
     return (
-        <div>
+        <div className="  w-1/2 mx-auto">
 
-            <form onSubmit={handelbroowbooks} className="grid grid-cols-1  mt-4 gap-6 " method="dialog">
+            <form onSubmit={handelbroowbooks} className="grid grid-cols-1 mt-4 gap-2 " method="dialog">
                 
-                <label className="form-control mx-auto  w-96">
+                <label className="form-control mx-auto w-60  md:w-96">
                     <div className="label">
                         <span className="label-text">User name</span>
                         
                     </div>
                     <input type="text" required name="displayName" defaultValue={user?.displayName} className="input input-bordered input-secondary " />
                 </label>
-                <label className="form-control mx-auto  w-96">
+                <label className="form-control mx-auto w-60  md:w-96">
                     <div className="label">
                         <span className="label-text">User Email</span>
                         
@@ -70,7 +70,7 @@ const Borrowpage = ({ books }) => {
                     <input type="email" required name="email" defaultValue={user?.email} className="input input-bordered input-secondary " />
                 </label>
 
-                <label className="form-control mx-auto  w-96">
+                <label className="form-control mx-auto w-60  md:w-96">
                     <div className="label">
                         <span className="label-text">Return date</span>
                         
@@ -84,7 +84,7 @@ const Borrowpage = ({ books }) => {
                     </div>
                 
                 
-                <input type="submit" className="btn btn-outline btn-secondary w-96 mx-auto" value=" Submit" />
+                <input type="submit" className="btn btn-outline btn-secondary w-60 md:w-96 mx-auto" value=" Submit" />
 
             </form>
             <div className="modal-action">

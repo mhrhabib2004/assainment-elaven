@@ -22,7 +22,7 @@ const Viewleastdata = () => {
     console.log(books,'ffffff')
     // const Book = books.find((Books) => Books._id === id);
     // console.log(Book);
-    const { image, name, author, category, rating, quantity, description, contents } = books;
+    const { image, name, author, category, rating, quantity, description, } = books;
     return (
         <div className="card mt-7  lg:card-side bg-base-100 shadow-xl">
             <figure><img className="ml-5 h-56 mb-5 mt-5" src={image} alt="Album" /></figure>
@@ -33,7 +33,7 @@ const Viewleastdata = () => {
                 <p>Quantity : {quantity}</p>
                 <p>Rating : {rating}</p>
                 <p>Bescription : {description}</p>
-                <p className="w-1/2">Contents : {contents}</p>
+                {/* <p className="w-1/2">Contents : {contents}</p> */}
 
                 <div className="w-full ">
                     {/* <Link onClick={() => document.getElementById('my_modal_4').showModal()} ><button className="btn btn-outline btn-accent "   >Borrow</button></Link> */}

@@ -31,7 +31,7 @@ const CategoryBook = () => {
                         <div className="card-body">
                             <h2 className="card-title">Name : {book.name} </h2>
                             <p>Author Name : {book.author} </p>
-                            <p>Categori : {book.category}</p>
+                            <p>Category : {book.category}</p>
 
                             <p>Rating : {book.rating} </p>
 
