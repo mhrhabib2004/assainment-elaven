@@ -41,6 +41,7 @@ const Login = () => {
                     icon: "success",
                     dangerMode: true,
                   })
+                  navigate(location?.state ? location.state : "/");
 
                 // navigate to login
                 
@@ -83,6 +84,7 @@ const Login = () => {
             icon: "success",
             dangerMode: true,
           })
+          navigate(location?.state ? location.state : "/");
           
         //   axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
         //   .then(res=>{

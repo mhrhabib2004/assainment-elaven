@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provaider/AuthProvaider";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 import moment from "moment";
+import swal from "sweetalert";
 
 
 
@@ -10,6 +11,8 @@ const Borrowpage = ({ books }) => {
     const borrowbooksdata = useLoaderData();
     console.log(borrowbooksdata);
     const { _id,image,name,category } = books;
+
+    const navigat = useNavigate();
 
     const { user } = useContext(AuthContext);
     const handelbroowbooks = e => {
@@ -36,6 +39,13 @@ const Borrowpage = ({ books }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                swal({
+                    title: "succsees",
+                    text: "You borrowed books Succsesfully",
+                    icon: "success",
+                    dangerMode: true,
+                  })
+                navigat('/borrowedbooks')
 
             })
 
@@ -70,7 +80,7 @@ const Borrowpage = ({ books }) => {
                
                    <div>
                    
-                    <input type="date" value={moment().format("MMM Do YY")}   name="borrrowedDate" className="input hidden input-bordered input-secondary " />
+                    <input type="text" value={moment().format("MMM Do YY")} name="borrrowedDate" className="input hidden input-bordered input-secondary " />
                     </div>
                 
                 
@@ -80,7 +90,7 @@ const Borrowpage = ({ books }) => {
             <div className="modal-action">
                 <form method="dialog">
 
-                    <button className="btn btn-warning">Breck</button>
+                    <button className="btn btn-warning">X</button>
                 </form>
             </div>
         </div>

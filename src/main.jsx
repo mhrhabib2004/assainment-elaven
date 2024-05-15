@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       {
         path:"/Updatebook/:id",
         element:<PrivetRout><UpdateBooks></UpdateBooks></PrivetRout>,
-        loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/${params.id}`)
+        loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/addbook/${params.id}`)
       },
       {
         path:"/borrowpage",

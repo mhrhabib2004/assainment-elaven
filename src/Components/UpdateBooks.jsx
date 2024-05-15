@@ -1,9 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 
 const UpdateBooks = () => {
     const bookupdate = useLoaderData();
+    const navigate= useNavigate();
+
+    // console.log(bookupdate,'ffdd')
 
     const handeleupdate = e => {
         e.preventDefault();
@@ -36,6 +39,8 @@ const UpdateBooks = () => {
                     confirmaButtonText:'cool'
                   })
             }
+            navigate('/allbooks')
+
         })
     }
 
