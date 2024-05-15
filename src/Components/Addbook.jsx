@@ -12,7 +12,7 @@ const Addbook = () => {
         const rating=form.rating.value;
         const description=form.description.value;
 
-        const booksData={image,name,Quantity,author,category,rating,description};
+        const booksData={image,name, Quantity ,author,category,rating,description};
         console.log(booksData)
 
         fetch(`${import.meta.env.VITE_LINK}/addbook`,{

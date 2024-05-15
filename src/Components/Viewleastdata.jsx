@@ -19,7 +19,7 @@ const Viewleastdata = () => {
 // })
 // console.log(id,'dddddddd')
     // console.log(id);
-    console.log(books,'ffffff')
+    // console.log(books,'ffffff')
     // const Book = books.find((Books) => Books._id === id);
     // console.log(Book);
     const { image, name, author, category, rating, quantity, description, } = books;

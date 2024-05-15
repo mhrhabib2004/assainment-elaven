@@ -9,7 +9,7 @@ import swal from "sweetalert";
 
 const Borrowpage = ({ books }) => {
     const borrowbooksdata = useLoaderData();
-    console.log(borrowbooksdata);
+    // console.log(borrowbooksdata);
     const { _id,image,name,category } = books;
 
     const navigat = useNavigate();

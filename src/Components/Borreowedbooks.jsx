@@ -12,7 +12,7 @@ const Borreowedbooks = () => {
 
     const userEmail = user?.email;
     const EmailData = mydatalist.filter((userData) => userData.email === userEmail);
-    console.log('Filtered Data', EmailData);
+    // console.log('Filtered Data', EmailData);
     // const { image, name, author, category, rating } = ;
 
     const handledelete = _id => {

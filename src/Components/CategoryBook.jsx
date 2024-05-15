@@ -15,7 +15,7 @@ const CategoryBook = () => {
         })
     })
 
-    console.log(catebooks,'load data')
+    // console.log(catebooks,'load data')
 
 
     const Book = catebooks.filter((Books) => Books.category === category);
