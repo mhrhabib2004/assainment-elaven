@@ -54,13 +54,13 @@ const AuthProvaider = ({ children }) => {
            
  //  if user existiong token
             if (crrentUser) {
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true } )
+                axios.post(`${import.meta.env.VITE_LINK}/jwt`, loggedUser, { withCredentials: true } )
                     .then(res => {
                         console.log('token response', res.data);
                     })
             }
             else {
-                axios.post('http://localhost:5000/logout', loggedUser, {
+                axios.post(`${import.meta.env.VITE_LINK}/logout`, loggedUser, {
                     withCredentials: true
                 })
                     .then(res => {
