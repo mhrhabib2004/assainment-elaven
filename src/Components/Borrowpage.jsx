@@ -51,7 +51,7 @@ const Borrowpage = ({ books }) => {
 
     }
     return (
-        <div className="  w-1/2 mx-auto">
+        <div className=" ">
 
             <form onSubmit={handelbroowbooks} className="grid grid-cols-1 mt-4 gap-2 " method="dialog">
                 
