@@ -39,49 +39,6 @@ const CardCategoris = ({ books }) => {
                     )
                 })}
                 
-
-                {/* 2 */}
-                {/* <div className="card  bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title uppercase"> category : Thriller</h2>
-
-                        <div className="card-actions">
-                            <button className="btn btn-primary">see more Thriller books</button>
-                        </div>
-                    </div>
-                </div> */}
-                {/* 3 */}
-
-                {/* <div className="card  bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title uppercase"> category : History</h2>
-
-                        <div className="card-actions">
-                            <button className="btn btn-primary">see more History books</button>
-                        </div>
-                    </div>
-                </div> */}
-                {/* 4 */}
-                {/* <div className="card  bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="uppercase card-title"> category : Drama</h2>
-
-                        <div className="card-actions">
-                            <button className="btn btn-primary">see more Drama books</button>
-
-                        </div>
-                    </div>
-                    
-                </div> */}
                 
 
             </div>

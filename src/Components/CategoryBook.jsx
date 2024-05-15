@@ -16,8 +16,7 @@ const CategoryBook = () => {
     })
 
     console.log(catebooks,'load data')
-    // const { category } = useParams();
-    // console.log(category,'params teke' )
+
 
     const Book = catebooks.filter((Books) => Books.category === category);
     // console.log(Book, "cateory");
