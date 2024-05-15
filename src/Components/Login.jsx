@@ -34,7 +34,7 @@ const Login = () => {
             .then(result=>{
                 const loggeduser=result.user;
                 console.log(loggeduser);
-                const user ={email}
+                // const user ={email}
                 swal({
                     title: "Welcome",
                     text: "You Loged in SuCCessfullY",
@@ -44,14 +44,14 @@ const Login = () => {
 
                 // navigate to login
                 
-                axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
-                .then(res=>{
-                    console.log(res.data)
-                    if(res.data){
-                        navigate(location?.state ? location.state : "/");
+                // axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+                // .then(res=>{
+                //     console.log(res.data)
+                //     if(res.data){
+                //         navigate(location?.state ? location.state : "/");
 
-                    }
-                })
+                //     }
+                // })
             })
             .catch(error =>{
                 swal({
@@ -74,14 +74,26 @@ const Login = () => {
     signInWithPopup(auth,provider)
     .then((result)=>{
         console.log(result);
+        // const loggeduser=result.user;
+        // console.log(loggeduser)
+        // const user ={email}
         swal({
             title: "Welcome",
             text: "You Loged in SuCCessfullY",
             icon: "success",
             dangerMode: true,
           })
+          
+        //   axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+        //   .then(res=>{
+        //       console.log(res.data)
+        //       if(res.data){
+        //           navigate(location?.state ? location.state : "/");
 
-        navigate(location?.state ? location.state : "/");
+        //       }
+        //   })
+
+        // navigate(location?.state ? location.state : "/");
     })
     .catch(()=>{
         swal({
