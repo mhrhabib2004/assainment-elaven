@@ -1,6 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase.config";
+import axios from "axios";
 
 
 
@@ -49,6 +50,8 @@ const AuthProvaider = ({ children }) => {
             console.log('user in the auth state changed', crrentUser);
             setUser(crrentUser);
             setLoading(false);
+           
+
 
 
         });

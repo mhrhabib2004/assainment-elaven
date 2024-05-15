@@ -8,6 +8,7 @@ import { FaEye } from "react-icons/fa6";
 import { signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../Provaider/AuthProvaider";
 import auth from "../firebase.config";
+import axios from "axios";
 
 
 const Login = () => {
@@ -31,7 +32,9 @@ const Login = () => {
         console.log(email, password);
         signIn(email, password)
             .then(result=>{
-                console.log(result.user)
+                const loggeduser=result.user;
+                console.log(loggeduser);
+                const user ={email}
                 swal({
                     title: "Welcome",
                     text: "You Loged in SuCCessfullY",
@@ -40,7 +43,15 @@ const Login = () => {
                   })
 
                 // navigate to login
-                navigate(location?.state ? location.state : "/");
+                
+                axios.post('http://localhost:5000/jwt',user,{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                    if(res.data){
+                        navigate(location?.state ? location.state : "/");
+
+                    }
+                })
             })
             .catch(error =>{
                 swal({

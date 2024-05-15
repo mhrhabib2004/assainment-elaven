@@ -1,14 +1,28 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Borrowpage from "./Borrowpage";
+// import { useEffect, useState } from "react";
+// import axios from "axios";
 
 const Viewleastdata = () => {
     const books = useLoaderData();
     // console.log(books);
+    // const [books,setbooks]=useState([]);
     const { id } = useParams(books);
+    
+   
+    // const url=`${import.meta.env.VITE_LINK}/addbook/${id}`;
+// useEffect(()=>{
+//     axios.get(url)
+//     .then(res=>{
+//         setbooks(res.data);
+//     })
+// })
+// console.log(id,'dddddddd')
     // console.log(id);
-    const Book = books.find((Books) => Books._id === id);
+    console.log(books,'ffffff')
+    // const Book = books.find((Books) => Books._id === id);
     // console.log(Book);
-    const { image, name, author, category, rating, quantity, description, contents } = Book;
+    const { image, name, author, category, rating, quantity, description, contents } = books;
     return (
         <div className="card mt-7  lg:card-side bg-base-100 shadow-xl">
             <figure><img className="ml-5 h-56 mb-5 mt-5" src={image} alt="Album" /></figure>
@@ -29,7 +43,7 @@ const Viewleastdata = () => {
                         <div className="modal-box w-1/2 max-w-5xl">
                             <h3 className="font-bold text-lg text-center">Hello!</h3>
                             <div className="mt-5 ">
-                                <Borrowpage Book={Book}></Borrowpage>
+                                <Borrowpage books={books}></Borrowpage>
 
                                 </div>
                             

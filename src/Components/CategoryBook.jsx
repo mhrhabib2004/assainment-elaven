@@ -1,10 +1,22 @@
 
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const CategoryBook = () => {
-    const catebooks = useLoaderData();
-    // console.log(catebooks,'load data')
+    // const catebooks = useLoaderData();
+    const [catebooks,setcatebooks]=useState([]);
     const { category } = useParams();
+    const url=`${import.meta.env.VITE_LINK}/addbook?/category=${category}`;
+    useEffect(()=>{
+        axios.get(url,{withCredentials:true})
+        .then(res=>{
+            setcatebooks(res.data);
+        })
+    })
+
+    console.log(catebooks,'load data')
+    // const { category } = useParams();
     // console.log(category,'params teke' )
 
     const Book = catebooks.filter((Books) => Books.category === category);

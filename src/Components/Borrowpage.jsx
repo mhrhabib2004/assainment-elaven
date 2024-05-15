@@ -6,10 +6,10 @@ import moment from "moment";
 
 
 
-const Borrowpage = ({ Book }) => {
+const Borrowpage = ({ books }) => {
     const borrowbooksdata = useLoaderData();
     console.log(borrowbooksdata);
-    const { _id,image,name,category } = Book;
+    const { _id,image,name,category } = books;
 
     const { user } = useContext(AuthContext);
     const handelbroowbooks = e => {

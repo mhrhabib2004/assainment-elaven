@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
+        // loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
       },
       {
         path:"/Login",
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
        {
         path:"/viewdata/:id",
         element: <PrivetRout><Viewleastdata></Viewleastdata></PrivetRout>,
-        loader: ()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
+        loader: ({params})=>fetch(`${import.meta.env.VITE_LINK}/addbook/${params.id}`)
       },
       {
         path:"/allbooks",
         element:<PrivetRout><Allbooks></Allbooks></PrivetRout>,
-        loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
+        // loader:()=>fetch(`${import.meta.env.VITE_LINK}/addbook`)
       },
       {
         path:"/allbooksgrid",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       {
         path:"category-book/:category",
         element:<PrivetRout><CategoryBook/></PrivetRout>,
-        loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/addbook?category=${params.category}`)
+        // loader:({params})=> fetch(`${import.meta.env.VITE_LINK}/addbook?category=${params.category}`)
       },
       {
         path:"/Updatebook/:id",

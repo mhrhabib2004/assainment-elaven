@@ -1,16 +1,25 @@
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import Allbookstable from "./Allbookstable";
 import Allbooksgrid from "./Allbooksgrid";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Allbooks = () => {
     const [view, setView] = useState("card");
     const [books, setBooks] = useState([]);
-    const allBooks = useLoaderData();
+    // const allBooks = useLoaderData();
+// const [allBooks,setallbooks]=useState();
+const url=`${import.meta.env.VITE_LINK}/addbook`;
+useEffect(()=>{
+    axios.get(url,{withCredentials:true})
+    .then(res=>{
+        setBooks(res.data);
+    })
+})
 
     // Function to filter available books
     const filterAvailableBooks = () => {
-        const availableBooks = allBooks.filter(book => book.Quantity > 0);
+        const availableBooks = books.filter(book => book.Quantity > 0);
         setBooks(availableBooks);
     };
 
@@ -20,9 +29,9 @@ const Allbooks = () => {
     };
 
     // Load all books initially
-    useEffect(() => {
-        setBooks(allBooks);
-    }, [allBooks]);
+    // useEffect(() => {
+    //     setBooks(allBooks);
+    // }, [allBooks]);
 
     return (
         <div className="mt-7">
