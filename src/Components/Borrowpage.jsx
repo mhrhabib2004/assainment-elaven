@@ -1,4 +1,4 @@
-import { useContext } from "react";
+
 import { AuthContext } from "../Provaider/AuthProvaider";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
@@ -7,8 +7,16 @@ import swal from "sweetalert";
 
 
 
+
 const Borrowpage = ({ books }) => {
     const borrowbooksdata = useLoaderData();
+    // const [borrowbooksdata, setBooks] = useState([]);
+    // useEffect(()=>{
+    //     axios.get(url,{withCredentials:true})
+    //     .then(res=>{
+    //         setBooks(res.data);
+    //     })
+    // })
     // console.log(borrowbooksdata);
     const { _id,image,name,category } = books;
 

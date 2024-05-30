@@ -1,7 +1,7 @@
 
 const Slider = () => {
     return (
-        <div  className="hero min-h-screen mt-7 rounded-xl " style={{ backgroundImage: 'url(https://www.vmtlib.michlibrary.org/library-books.jpg/@@images/image.jpeg)' }}>
+        <div  className="hero min-h-screen  rounded-xl " style={{ backgroundImage: 'url(https://www.vmtlib.michlibrary.org/library-books.jpg/@@images/image.jpeg)' }}>
             <div className="hero-overlay bg-opacity-60 rounded-xl "></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

@@ -29,7 +29,7 @@ const Addbook = () => {
             if (data.insertedId){
                 swal({
                     title: "WoW",
-                    text: "You added spot successfully",
+                    text: "You added books successfully",
                     icon: "success",
                     confirmaButtonText:'cool'
                   })

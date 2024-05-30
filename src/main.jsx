@@ -22,6 +22,7 @@ import Borrowpage from './Components/Borrowpage.jsx';
 import PrivetRout from './Components/PriveteRout.jsx';
 import CategoryBook from './Components/CategoryBook.jsx';
 import Borreowedbooks from './Components/Borreowedbooks.jsx';
+import TimeDate from './Components/TimeDate.jsx';
 
 
 const router = createBrowserRouter([
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
         path:"/borrowedbooks",
         element:<PrivetRout><Borreowedbooks></Borreowedbooks></PrivetRout>,
         loader: ()=> fetch(`${import.meta.env.VITE_LINK}/borrow`)
+      },
+      {
+        path:"/time",
+        element:<TimeDate></TimeDate>
       }
      
     ]
@@ -92,7 +97,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- <div className='p-2'>
+ <div className='container mx-auto'>
    <React.StrictMode>
     <AuthProvaider>
      <RouterProvider router={router} />

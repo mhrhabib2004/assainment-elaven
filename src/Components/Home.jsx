@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 
+
 const Home = () => {
     // const books=useLoaderData();
     const [books,setBooks]=useState([]);
@@ -24,6 +25,7 @@ const Home = () => {
             <Slider></Slider>
            
             <CardCategoris books={books} ></CardCategoris>
+            
             <Bloog></Bloog>
             <Contact></Contact>
 
